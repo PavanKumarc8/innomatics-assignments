@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Internship Projects and Assignments
 
 Welcome to the repository of my **Innomatics Internship** projects and assignments. This repository contains the work I have completed as part of my internship, including various web development, full-stack projects, and more.
