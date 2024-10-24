@@ -1,0 +1,238 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F3C88;
+    color: white;
+    padding: 1rem;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 1rem;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://www.hubspot.com/hs-fs/hubfs/lp-hero.png') no-repeat center center/cover;
+    color: #171646;
+    text-align: center;
+    padding: 10rem 2rem;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff6347;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.feature {
+    flex: 1 1 30%;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: #e7e7e7;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Signup Section */
+.signup {
+    padding: 2rem;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.signup form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.signup input {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.signup button {
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+footer .social-icons a {
+    color: white; /* White social icons */
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+footer .social-icons a:hover {
+    color: #FFD700; /* Gold on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Mobile-specific styles */
+    nav ul {
+        display: none; /* Hide nav links on mobile */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #1F3C88;
+        width: 100%;
+        flex-direction: column;
+        text-align: right;
+        padding: 1rem;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature {
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Tablet-specific styles */
+    .features {
+        flex-direction: row;
+    }
+
+    .feature {
+        flex: 1 1 45%;
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Desktop-specific styles */
+    .features {
+        flex-direction: row;
+    }
+
+    .feature {
+        flex: 1 1 30%;
+    }
+}
